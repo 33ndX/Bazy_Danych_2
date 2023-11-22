@@ -102,7 +102,20 @@ alter table postac add
 foreign key(nazwa_statku)
 references statek(nazwa_statku);
 
+#zad.5.7
+UPDATE postac
+SET nazwa_statku = 'SMS Schleswig-Holstein'
+WHERE rodzaj = 'wiking';
 
+UPDATE postac
+SET nazwa_statku = 'Bismarck'
+WHERE nazwa = 'Drozda';
+
+#zad.5.8
+DELETE FROM izba WHERE nazwa_izby = 'spiżarnia';
+
+#zad.5.9
+DROP TABLE izba;
 
 
 ```
