@@ -63,8 +63,17 @@ SELECT CONCAT(nazwa, ' - ', rodzaj) AS nazwa_i_rodzaj
 FROM kreatura
 WHERE rodzaj LIKE 'wi%';
 
-#4.3
+#zad.4.3
 SELECT nazwa, ilosc * waga AS całkowita_waga
 FROM zasob
 WHERE YEAR(dataPozyskania) BETWEEN 2000 AND 2007;
+
+#zad.5.1
+SELECT waga*0.7 as wagaNetto, waga*0.3 as wagaOdpadkow  FROM zasob;
+
+#zad.5.2
+SELECT * FROM zasob where rodzaj is null;
+
+#zad.5.3
+SELECT distinct rodzaj,nazwa FROM zasob where nazwa like 'Ba%' or nazwa like '%os' order by nazwa asc;
 ```
