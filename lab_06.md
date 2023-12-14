@@ -1,17 +1,13 @@
 
 ```sql
 #zad.1.1
-CREATE TABLE kreatura AS
-SELECT *
-FROM wikingowie.kreatura;
+create table ekwipunek like wikingowie.ekwipunek;
+create table kreatura like wikingowie.kreatura;
+create table zasob like wikingowie.zasob;
 
-CREATE TABLE ekwipunek AS
-SELECT *
-FROM wikingowie.ekwipunek;
-
-CREATE TABLE zasob AS
-SELECT *
-FROM wikingowie.zasob;
+insert into ekwipunek select * from wikingowie.ekwipunek;
+insert into kreatura select * from wikingowie.kreatura;
+insert into zasob select * from wikingowie.zasob;
 
 #zad.1.2
 SELECT * FROM zasob;
