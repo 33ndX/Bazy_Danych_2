@@ -1,5 +1,16 @@
 
 ```sql
+# Stworzenie tabel
+create table uczestnicy like wikingowie.uczestnicy;
+create table etapy_wyprawy like wikingowie.etapy_wyprawy;
+create table sektor like wikingowie.sektor;
+create table wyprawa like wikingowie.wyprawa;
+# Dodanie rekordów
+insert into uczestnicy select * from wikingowie.uczestnicy;
+insert into etapy_wyprawy select * from wikingowie.etapy_wyprawy;
+insert into sektor select * from wikingowie.sektor;
+insert into wyprawa select * from wikingowie.wyprawa;
+
 #zad.1.1
 insert into kreatura select * from zasob;
 
