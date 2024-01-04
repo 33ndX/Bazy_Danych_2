@@ -1,5 +1,6 @@
 
 ```sql
+#zad.1.1
 # Stworzenie tabel
 create table uczestnicy like wikingowie.uczestnicy;
 create table etapy_wyprawy like wikingowie.etapy_wyprawy;
@@ -11,8 +12,6 @@ insert into etapy_wyprawy select * from wikingowie.etapy_wyprawy;
 insert into sektor select * from wikingowie.sektor;
 insert into wyprawa select * from wikingowie.wyprawa;
 
-#zad.1.1
-insert into kreatura select * from zasob;
 
 #zad.1.2
 select k.nazwa from kreatura k left join uczestnicy u on u.id_uczestnika=k.idKreatury where id_uczestnika is null
